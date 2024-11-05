@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ Titulo }}</title>
+    <link rel="stylesheet" href="/static/estilo.css">
+</head>
+<body>
+    <div class="receita-card">
+      <div class="page-header">
+          <h1>{{ Titulo }}</h1>
+      </div>
+      <form action='/criar' method="post">
+        <fieldset>
+          <div class="form-group">
+            <label for="nome">Nome do Prato</label>
+            <input type="text" id="nome" name="nome" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="categoria">Categoria do Prato</label>
+            <select id="categoria" name="categoria" required>
+              <option value="Entrada">Entrada</option>
+              <option value="Pratoprincipal">Prato Principal</option>
+              <option value="Sobremesa">Sobremesa</option>
+              <option value="Outro">Outro</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="tempop">Tempo de Preparo</label>
+            <input type="text" id="tempop" name="tempop" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="tempoc">Tempo de Cozimento</label>
+            <input type="text" id="tempoc" name="tempoc" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="dificuldade">Dificuldade</label>
+            <input type="text" id="dificuldade" name="dificuldade" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="dicas">Dicas</label>
+            <input type="text" id="dicas" name="dicas" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="ingredientes">Ingredientes</label>
+            <input type="text" id="ingredientes" name="ingredientes" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="valornutricional">Valor Nutricional</label>
+            <input type="text" id="valornutricional" name="valornutricional" class="form-control" required>
+          </div>
+
+          <button type="submit" class="btn-salvar">Salvar</button>
+        </fieldset>
+      </form>
+    </div>
+    <br>
+    <div class="receita-card">
+     <a href="/">Voltar</a>
+    </div>
+
+</body>
+</html>

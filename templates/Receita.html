@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ Titulo }}</title>
+    <link rel="stylesheet" href="/static/estilo.css">
+</head>
+<body>
+    <div class="page-header">
+        <h1>{{ Titulo }}</h1>
+    </div>
+
+    <br>
+    {% for Receita in ListaReceitas %}
+    <div class="receita-card">
+        <h2>{{ Receita[1] }}</h2>
+        <img src="../static/imagens/receitas.png">
+        <p>Nome: {{ Receita[0] }}</p>
+        <p>Categoria: {{ Receita[2] }}</p>
+        <p>Tempo de Preparo: {{ Receita[3] }}</p>
+        <p>Tempo de Cozimento: {{ Receita[4] }}</p>
+        <p>Dificuldade: {{ Receita[5] }}</p>
+        <p>Dicas: {{ Receita[6] }}</p>
+        <p>Ingredientes: {{ Receita[7] }}</p>
+        <p>Valor Nutricional: {{ Receita[8] }}</p>
+        <br>
+    </div>
+{% endfor %}
+
+
+
+    <div class="receita-card">
+     <a href="/">Voltar</a>
+    </div>
+</body>
+
+
+</html>
